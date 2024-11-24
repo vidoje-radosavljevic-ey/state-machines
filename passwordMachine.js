@@ -5,8 +5,8 @@ const { setup, createActor, assign } = require('xstate');
 
 const testMachine = setup({
     actions: {
-        togglePassVisibility: assign(({ context }) => ({ passVisible: !context?.passVisible || false })),
         inputValidPassword: assign(({ event }) => ({ passwordValue: event.value, passwordErrorMessage: '' })),
+        inputInvalidPassword: assign(({ event }) => ({ passwordValue: event.value, passwordErrorMessage: '' })),
         inputWrongPassword: assign(({ event }) => {
             const result = {
                 passwordValue: event.value,
