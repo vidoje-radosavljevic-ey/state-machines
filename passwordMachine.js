@@ -1,6 +1,8 @@
 // import { setup, createActor, assign } from 'xstate';
 const { setup, createActor, assign } = require('xstate');
 
+//TODO: Add a new state
+
 const testMachine = setup({
     actions: {
         togglePassVisibility: assign(({ context }) => ({ passVisible: !context?.passVisible || false })),
