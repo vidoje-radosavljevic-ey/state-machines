@@ -6,7 +6,7 @@ const { setup, createActor, assign } = require('xstate');
 const testMachine = setup({
     actions: {
         inputValidPassword: assign(({ event }) => ({ passwordValue: event.value, passwordErrorMessage: '' })),
-        inputInvalidPassword: assign(({ event }) => ({ passwordValue: event.value, passwordErrorMessage: '' })),
+
         inputWrongPassword: assign(({ event }) => {
             const result = {
                 passwordValue: event.value,
