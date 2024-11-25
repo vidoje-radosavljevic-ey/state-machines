@@ -47,7 +47,7 @@ const testMachine = setup({
         // isNotAuthenticated: () => Math.random() < 0.5,
     },
 }).createMachine({
-    /** @xstate-layout N4IgpgJg5mDOIC5QAcCGtYHcD2AnCAxAEoCiAyiQCoDaADALqIrawCWALq9gHZMgAeiAIy0A7AFYAdAGYAbACZx4gJxzF4+QBoQAT2HyAvge1oMOfJLDd2YXAH1TWPIQDCAGQCSLgNJ2AYgDyRADiATQMfMgsHFy8SAKI8gAs0pJCChqiSUkAHCmy0uLaeghCIsppikLy0vI5srKiyklGJuhOFlY29o7mrp4+dqF2AEIAgj50jPFRbJw8fIIIyanpivJZufmFxYlZkqIStPIF0rXiOdKtIL3Olta2Du19BO5evm4BwXYeAHJTkWi8zioCWKzSGQ22Tych2ukQshyokkSVUOREOXE0kOeWut06Dx6z2crwGHy+P3+QmmzDmsUWiRSEPWmxhBSK8IQSVkFUuEixQiOSgKeOJBO6TzMJLeg0+3z+1HkNJuQPp8TBTLWmWh2w5JSEOVoB0UtDKtGUtFRyiE4lFUosrG4ADdUAAbVgQOwAV1gtm4qAAtmA7HhJR1+u9-EFQuFlbMYgt1YgckjJLIDfUMtzlDzdggVEabQokZic-Jy3bw5JHS73Z6fX7A8HQ-iI4NhuNJhEZqrE6Dk6n0ymGops7nOdlUuJEaJZLlRNIhIuWsYbmKINXnW6Pd7fbh-UGQ0T7W3yfL-t3aQmQQkECnkUPM6OeeOSuIkkJJPI0bRF+JaJcQiVn0m61juDb7k2R5hi8MpnpS1DUoCdJ9re95phmI7vi+yh5tIzQHLQxamnO0hJKawF3GAAbIOwOgwdKZJRiEYQAj2KE3ksQhJDUkj1Bs5rpPxdR5lkFRnEuGywti76UZ0NF0Qx+CkpGHYTN4bFXsCDKlDxqT8aIgmIgoImcoZRrcimQjKIZ1RlDkckbtRtH0a2KmyhSCqXiqHE6daRqIku9QpMJeaovIKKLhsiiFN+qKiI5lgKa567ufBCpIex146dxvEGUZwk5Hmc6fsoaIGjyogph+iUAGZ4FA2DsEpp5DAEozqZpPnZUmpTiFVfH-icyjyCIKjJHmyg5BU1nSJiTRVdaS51Q1TUtQQvwkAAGrGyE9f2pQ5hU-5zpaxwpnIsh5uUyIAScayiAa1kJdc3DYBAcCROue3ab1AC0QiTaktD-rQRFEdxIg1IlXSPK2P1qgdSSiKJ5p8RaNRyHkzSqIlNbbvWe4Hs2x7hgjqFLAWkhlkoOZIumihhSNlRDem4jpNIxww8lLXk5x+jcjI6xLuaxyjajhYZJcc6yNOSS2quraSPVuCNc18NZb9B2Csz04WtOYMfsjgOcuUsgHLOZE8mRVXJIlTq2KwtX0QAxu9YB8zp8hiJ+5zVGITT9Sb+rmubhwFNmNs5HbivrpIAaoP6MAONg7ou6wn2a4jt46xFesg7IhvcY9xWc3xGYnOWWMKNzqCsK6nu9bnkj5wblrF8HCLTV+P4qMo7OTkYRhAA */
+    /** @xstate-layout N4IgpgJg5mDOIC5QAcCGtYHcD2AnCAdGAHYAuYuA+mhjvgMQDCAMgJKMDSlAYgPIBKAcV4AVANoAGALqIU2WAEtSC7MVkgAHogCs2gMwE9R4yaMAWADQgAnoj1mAnAF8nVmljyES5Ku7oQmNk5KYUoAIQBBTkkZJBBkeSUVNTitBABGdIk9K1sEe2dXePQPfCIyCmoS-0D2LmZeQUpWADkY9QTFZVV1NPTdMwIJAA5TU21cuwAmMxc3as9ynyraT1rghqbWsXTYuS7k3sR+4YB2Am1RseMJm0QzADZZor9F70rXhhY6yk3mtqme3iiW6KVAfSeDgIZnSDzh8IRp0mCAeEme81WZQUxAAbqgADYKCCUACusAoxFQAFswJQ8CtSgFvsE+EJRO04p0kj1UjozDk7iipoUMYyCNi8YTiWSKdTafTPkyglxQpFotIOiDDryMpkHsiHsK5sVMYQJQSiaTybhKTS6b4Fl9lb9Gv8OftuWDNMcstohldrnpbnlRg9jYrxbiLdLrbb5Q7Tet6q7trtNQceeDjmj0hcA9dg4gHKcwy9HV4qchSNYGTVmVxWcJxBrOVrM96EKc9FMhhI+-2BxJ0gajWXTURK9Xa2t6yFeOEohx3cCM160g4prnB9uhyORSaxWBJzXFUmXVs2i2PaCjp2Zv7A0ZCwhQ+HyxOqyfy2e-qmgVybx1OEJDzR8g2RYtS1FfwCAAMzwKBsFIacnR+VVF2XADtSzfJLkMMDwMFAo33HeDcEQ5DTxaABRAANZt-zbNd7nSBw9xIsUyIolCAlCNgADVqMwpjbymEt2LHRl6H4aiAGVqIY9NPVvdIpmRbQphcIpiGwCA4A6cslMAnCAFozGGZETKmKYJA4mD3gTRkjOwjssmGfVBSmbs7MWc0pStWU7QVQzW1XFSzC8iCSx8soj0-HjnPbPp+mfU4zHRA8YK4pCEtC5SdQ0iRkUcKDMsWHEKAUWCawAY10sBEuY-JTjYwU0oyiMqVQSkYGobBCRqhR9Ly4zXIeBxWryTJYRiitUAUfFGpU9I9CRQUSq0pwgA */
     id: 'password',
     context: {
         passwordValue: '',
@@ -60,18 +60,7 @@ const testMachine = setup({
     on: {
         RESET: {
             target: '#password',
-            actions: assign((context) => {
-                return {
-                    emailValue: '',
-                    emailErrorMessage: '',
-                    emailValidationMessage: '',
-                    dispatchedContinue: false,
-                    passwordValue: '',
-                    passwordErrorMessage: '',
-                    passVisible: false,
-                    // "Invalid username or password" | "Account is locked" (3rd time)
-                };
-            }),
+            actions: "inline:password#RESET[-1]#transition[0]",
         },
     },
     initial: 'enter_password',
@@ -81,13 +70,13 @@ const testMachine = setup({
                 CLICK_FORGOT: '#password.forgot_password',
                 CLICK_GO_BACK: '#password.email',
                 CLICK_LOG_IN: [
-                    { target: '#password.empty_password', guard: 'passwordEmpty', actions: 'inputEmptyPassword' },
+                    { target: '#password.empty_password', guard: 'passwordEmpty', actions: "inputEmptyPassword" },
                     {
                         target: '#password.invalid_username_or_password',
                         guard: 'passwordInvalid',
-                        actions: 'inputWrongPassword',
+                        actions: "inputWrongPassword",
                     },
-                    { target: '#password.manage_policies', guard: 'passwordValid', actions: 'inputValidPassword' },
+                    { target: '#password.manage_policies', guard: 'passwordValid', actions: "inputValidPassword" },
                 ],
             },
         },
@@ -96,8 +85,8 @@ const testMachine = setup({
                 CLICK_FORGOT: '#password.forgot_password',
                 CLICK_GO_BACK: '#password.email',
                 CLICK_LOG_IN: [
-                    { target: '#password.empty_password', guard: 'passwordEmpty', actions: 'inputEmptyPassword' },
-                    { target: '#password.manage_policies', guard: 'passwordValid', actions: 'inputValidPassword' },
+                    { target: '#password.empty_password', guard: 'passwordEmpty', actions: "inputEmptyPassword" },
+                    { target: '#password.manage_policies', guard: 'passwordValid', actions: "inputValidPassword" },
                 ],
             },
         },
@@ -109,9 +98,9 @@ const testMachine = setup({
                     {
                         target: '#password.invalid_username_or_password',
                         guard: 'passwordInvalid',
-                        actions: 'inputValidPassword',
+                        actions: "inputValidPassword",
                     },
-                    { target: '#password.manage_policies', guard: 'passwordValid', actions: 'inputValidPassword' },
+                    { target: '#password.manage_policies', guard: 'passwordValid', actions: "inputValidPassword" },
                 ],
             },
         },
