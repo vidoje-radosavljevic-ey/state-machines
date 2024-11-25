@@ -26,18 +26,18 @@ const testMachine = setup({
     guards: {
         passwordEmpty: ({ event, context }) => {
             const result = event.value === '';
-            console.log('GUARD FOR EMPTY PASSWORD', result);
+            console.log('GUARD FOR EMPTY PASSWORD_CHECK', result);
             return result;
         },
         passwordValid: ({ event, context }) => {
             const result = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(event.value);
-            console.log('GUARD FOR VALID PASSWORD:', result);
+            console.log('GUARD FOR VALID PASSWORD_CHECK:', result);
             return result;
         },
         passwordInvalid: ({ event, context }) => {
             const reg = !/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(event.value);
             const result = reg && event.value !== '';
-            console.log('GUARD FOR INVALID PASSWORD:', result);
+            console.log('GUARD FOR INVALID PASSWORD_CHECK:', result);
             return result;
         },
 
