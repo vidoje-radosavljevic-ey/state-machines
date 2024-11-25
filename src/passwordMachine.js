@@ -117,6 +117,7 @@ const testMachine = setup({
             on: {
                 CLICK_GO_BACK: '#password.enter_password',
                 NEXT: '#password.verify_code',
+                GO_LIVE: '#password.verify_code',
             },
         },
         verify_code: {},
