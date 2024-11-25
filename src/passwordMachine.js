@@ -54,6 +54,7 @@ const testMachine = setup({
         passwordErrorMessage: '',
         passVisible: false,
         passInvisible: false,
+        passwordUntouched: true,
         // "Invalid username or password" | "Account is locked" (3rd time)
     },
     on: {
@@ -80,13 +81,13 @@ const testMachine = setup({
                 CLICK_FORGOT: '#password.forgot_password',
                 CLICK_GO_BACK: '#password.email',
                 CLICK_LOG_IN: [
-                    { target: '#password.empty_password', guard: 'passwordEmpty', actions: "inputEmptyPassword" },
+                    { target: '#password.empty_password', guard: 'passwordEmpty', actions: 'inputEmptyPassword' },
                     {
                         target: '#password.invalid_username_or_password',
                         guard: 'passwordInvalid',
-                        actions: "inputWrongPassword",
+                        actions: 'inputWrongPassword',
                     },
-                    { target: '#password.manage_policies', guard: 'passwordValid', actions: "inputValidPassword" },
+                    { target: '#password.manage_policies', guard: 'passwordValid', actions: 'inputValidPassword' },
                 ],
             },
         },
@@ -95,8 +96,8 @@ const testMachine = setup({
                 CLICK_FORGOT: '#password.forgot_password',
                 CLICK_GO_BACK: '#password.email',
                 CLICK_LOG_IN: [
-                    { target: '#password.empty_password', guard: 'passwordEmpty', actions: "inputEmptyPassword" },
-                    { target: '#password.manage_policies', guard: 'passwordValid', actions: "inputValidPassword" },
+                    { target: '#password.empty_password', guard: 'passwordEmpty', actions: 'inputEmptyPassword' },
+                    { target: '#password.manage_policies', guard: 'passwordValid', actions: 'inputValidPassword' },
                 ],
             },
         },
@@ -108,9 +109,9 @@ const testMachine = setup({
                     {
                         target: '#password.invalid_username_or_password',
                         guard: 'passwordInvalid',
-                        actions: "inputValidPassword",
+                        actions: 'inputValidPassword',
                     },
-                    { target: '#password.manage_policies', guard: 'passwordValid', actions: "inputValidPassword" },
+                    { target: '#password.manage_policies', guard: 'passwordValid', actions: 'inputValidPassword' },
                 ],
             },
         },
