@@ -59,7 +59,18 @@ const testMachine = setup({
     on: {
         RESET: {
             target: '#password',
-            actions: "inline:password#RESET[-1]#transition[0]",
+            actions: assign((context) => {
+                return {
+                    emailValue: '',
+                    emailErrorMessage: '',
+                    emailValidationMessage: '',
+                    dispatchedContinue: false,
+                    passwordValue: '',
+                    passwordErrorMessage: '',
+                    passVisible: false,
+                    // "Invalid username or password" | "Account is locked" (3rd time)
+                };
+            }),
         },
     },
     initial: 'enter_password',
