@@ -53,6 +53,7 @@ const testMachine = setup({
         passwordValue: '',
         passwordErrorMessage: '',
         passVisible: false,
+        passInvisible: false,
         // "Invalid username or password" | "Account is locked" (3rd time)
     },
     on: {
