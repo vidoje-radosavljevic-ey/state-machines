@@ -19,7 +19,7 @@ const testMachine = setup({
         emailNextFired: ({ context }) => context?.dispatchedContinue === true || false,
     },
 }).createMachine({
-    /** @xstate-layout N4IgpgJg5mDOIC5QCMBMBjAdAGwPZQEsA7AfTAFsBDA7TCgBwBcBPE4+gV0YGIBhAeQByAFQCSggKoBRANoAGALqJQ9XLAKMCuIspAAPRAHYArAEYANCGaIAnABZTmVAF9nltFjyFSFarQYsbEScPFIAsgCCogAyJOIAChLC8kpIIKrqmtq6BgiGDpbWCKamABylmMYAzDW1dTWu7hg4+MRkVDR05Eys7Fzc4VGxCUkypqkqahpaOmm5JaZ2hYimcjaoTo0gHi3e7X5dPUEhA5ExcYKJyagT6VNZs6DzxnKoy8WmVYaYpQBs-wDAb9Slsdl42r5OgFWGAAE6w3CwvhCMSSWSKXQZabZOYrF5vKyIUp2b6GUHNcE+Dr+bqBOEIpGDc4jZIYtJYh45PGvd42QxyTBktzbCmtKkHaFkeGI05DC5XMa3DkzLnFUomd6lVCOOT1PVVcmeMX7TrEABulGwBAgx36AhE4mkKUx9xVuIQqF+VQqxk1dl+mH1esNuwh1Mw5st1ttoTOw0uozZk0ybqeRgKhOKVV+AuqQdqIcpJtokatNr6sblLMVLpTOLTHtQdlK71W2p+QM7QqaRr2kJLRAtZalDORDrRzvZrvr+kQnu170MqCqgfzBeFYON-Yjg6jNvpMqZ8YVSbudces7yGaK3oDNnvD8fD8LW-DpejB8Zcflo3GtexF65KgTYtpmxhmKua4Ghuop9m+u7Dp+srMgm1xKtOgFzr8C5gRBUENDBvZhgcQ7RhWY6ok6p7KjOuRVMuvy8thmyEaG4qdKR5bBP0R4-qy6Hnqq+QWJmJjGIGnZAt2IpEextCcTGyHHr+AkAaqCxLJmAKCi+cEkXuim8dWNz-py7qmPi7wkjYkH5p6hrcAASlIADKUj8aZqaXqghiMZmnyvJU+G6cRUK0r03E8IIUgAOokAAIuE-CTsmanmT54kAnYxj8nI6pyHIhituBdiYHY5VmNqdg2BZTauMKRC4BAcC6B4nm0XOqCgUUpguKxRb9u1mEIMYwHvKgNh3k+002CFcmHIEFZDaqOVyK23rSZuelhUcn7LelhjdSsBVyHNxY7gpS1ToJ7pVAVNiajVZ3bu++7SrC+0NsuVSaUU6q-M94aXZFn2XqYNilCJPW6qYIb0JQsCwAA7oiECg3RvwPZmnrGPVzhAA */
+    /** @xstate-layout N4IgpgJg5mDOIC5QCMBMBjAdAGwPZQEsA7AfTAFsBDA7TCgBwBcBPE4+gV0YGIBhAeQByAFQCSggKoBRANoAGALqJQ9XLAKMCuIspAAPRAHYArAGYANCGaIAbABYAnAF8nltFjyFSFarQYs2Ik4eKQBZAEFRABkScQAFCWF5JSQQVXVNbV0DBEM7CytEAEY5GyLMU0qq6qqXNwwcfGIyKho6ciZWdi5uMMiY+MSZIpSVNQ0tHVScotmbS2sEEptUTBt1jc314zqQd0avFt92zsDg3ojo2MEEpNRRtPHMqdAZ4zk7BeKSgA4KmoBpl2+08zR8bX8XSCPUEUgA6iQACJhfjJXTpCZZaaIH52QxfJaoSr-QHVYENUHeVp+DoBbo8ABC4V4AGkSMJ+CQAMrCcLCKRRACaaNSGOe2RxqE+hQQxmMzlcewpTSpx0hZAAThrcBq+EIxJJZIp0U9JhKlu9pYsbA5DGstg6bOSPCqjhDaawwFqdRd+tdbiKxhkzdiLR8CcZUMZ7Y7Ns6DmDqScAl7tbq+ldBkkRibg1jXsUfoZ8TK7D8bCTSaZUE7FSDXeDaMQAG6UbAECBnHoCETiaSBx55l76RA196YYwEww2O2xzaGeOUt1Noit9ud+m+zM3IbG0Wm-Mj3L5AlFaumStVxcNpMttsdrshS4DHfZh5ikMFhCoGtyU9yIo7SBOtlUORtMDvddNTTPVe0NAcP0PHIa0qAl7DsGM5wXECXTA29V3vTtUx9DMXwDPcg0xYccjyApFlMItrzw45IIfYj02ff0hhzfch3NH8bD-GUGOw+pcMTFiCKg9itzIoZ7lzKj+JsVDhMYnCE1VNo1wfTcewNfsKMHJTQ2rMsCQcYxZyrWoNKXcCdI3aEnz9LMEIPaijBPGUfh+BxL1JJiJO0wjH1kri30U8VQ1mIp5hlQwHGAsTNOXTBHLC0iIpkBTeJMr8iktAkfgYzDY1EpV0G4AAlKQuSkJIjMQzzvxnU9UEMP4bNslL7KTdVNykZswCIRgAAJDHcvjQ2MewJ3a3ygq0mlTk3ZFQgASiRFEpvyo8ijsVA-h+YwigcPFfLLWjT0cDDqkjBx7HLFxFSIXAIDgXR3Ciz8j1QM72qW5cfqQxAiplVBbSB8CBuckGWrlVBT1MMtof6j1oJ1eHzSKKUS0WQwALRySMvpbHTLkf7TwOuxibaViiO9DVya-Ik7Higmobsm9jlJuG8uigrHp+f8a3jehKFgWAAHcdQgFmj1MU6CTHOnaEEMBpbG2BGEoRgwDGooFZyRH5plXG4pepwgA */
     id: 'b2c',
     context: {
         emailValue: '',
@@ -34,7 +34,7 @@ const testMachine = setup({
     on: {
         RESET: {
             target: '#b2c.login_email',
-            actions: 'inline:b2c#RESET[-1]#transition[0]',
+            actions: "inline:b2c#RESET[-1]#transition[0]",
         },
     },
     initial: 'login_email',
@@ -48,7 +48,7 @@ const testMachine = setup({
                         CONTINUE: [
                             {
                                 target: '#b2c.login_email.empty_error',
-                                actions: ['dispatchEmailNext', 'setEmptyError'],
+                                actions: ["dispatchEmailNext", "setEmptyError"],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -57,26 +57,29 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.valid_input',
                                 guard: 'emailValid',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_error',
                                 guard: 'emailInvalidError',
-                                actions: ['inputEmail', 'setValidError'],
+                                actions: ["inputEmail", "setValidError"],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_input',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
 
                         NEW_DEMO: 'valid_input',
                         BACK_TO_STATELY: 'empty_error',
+                        "Event 7": "New state 1",
+                        "DEM)_DEMO": "valid_input"
                     },
                 },
+
                 empty_error: {
                     on: {
                         CONTINUE: {
@@ -87,23 +90,24 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.valid_input',
                                 guard: 'emailValid',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_error',
-                                actions: ['inputEmail', 'setValidError'],
+                                actions: ["inputEmail", "setValidError"],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
                     },
                 },
+
                 invalid_input: {
                     on: {
                         CONTINUE: [
                             {
                                 target: '#b2c.login_email.invalid_error',
-                                actions: ['dispatchEmailNext'],
+                                actions: ["dispatchEmailNext"],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -111,17 +115,18 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.empty_input',
                                 guard: 'emailEmpty',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.valid_input',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
                     },
                 },
+
                 invalid_error: {
                     on: {
                         CONTINUE: {
@@ -132,24 +137,25 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.empty_input',
                                 guard: 'emailEmpty',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.valid_input',
                                 guard: 'emailValid',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_error',
                                 guard: 'emailInvalidError',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
                     },
                 },
+
                 valid_input: {
                     on: {
                         CONTINUE: { target: '#b2c.password', description: '***** DESCRIPTION DEFINED BY BA *****' },
@@ -157,23 +163,25 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.empty_input',
                                 guard: 'emailEmpty',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_error',
                                 guard: 'emailInvalidError',
-                                actions: ['inputEmail', 'setValidError'],
+                                actions: ["inputEmail", "setValidError"],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_input',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
                     },
                 },
+
+                "New state 1": {}
             },
         },
 
