@@ -19,7 +19,7 @@ const testMachine = setup({
         emailNextFired: ({ context }) => context?.dispatchedContinue === true || false,
     },
 }).createMachine({
-    /** @xstate-layout N4IgpgJg5mDOIC5QCMBMBjAxAJQKIGVcAVAbQAYBdRUABwHtYBLAF0boDtqQAPRAFlQAaEAE9EARgDM4gBwA6AKwA2Scr5TZATgWaAvruFp0cgDZ0ojdgH0wAWwCGjE3Ls1mIq5ZoBXZpgDCAPIAckQAksEAqrjkVEgg9EysHFy8CKpkigDsfJqaWeKomjJKOsJiCDKSmTLiSkp8SvkqkpJ6BiBGpuaWNg5OLrZuHl6+mLgAsgCCYQAyVhEACpGklFyJLGyc8WkZ2bn5hcWlmuUSCuJykgcyqFWoCllkMnz6hhjdFtZ2js6u7p52D4-JMZvMlisSOI4rQGJsUjtEHtHgcCkUSmVRBJxFlJFdVHwyGR6tUVK8Ol0zF8+r9BsNAcDxtM5gtgstSKgYQk4cltqBdgpMii8mjjpiKnwnnJNEoyJIZDK+NciS83p0PlTej8Bv8PGAAE76uj6gIhcJRGJreIbXmpRBPS7iOWFVDXLKoOpnSqqOSoD0yGQ5HIPEpqyk9b79P5DAEGo0m0EsiGrLk2rZ2yqNOSyHKaJW5SR3SRegryPOSAqlCsVgNhjURmk6mN6w3Gplg1nsqGpnnpxGZpTZwO5fOaQtVL0vPhySW5JTiJ1qGR14yayO0ywAN3sJkYEAZYyCoQi0Vi617CP5iBeg5zI+uY6LXp0ePUqEl4hlmidMpXny1UZyFuO57geILMuCbKQlasJJH2V7pFkg58MOSh3GOBatF61wKDORTiHwgpZBc0hKH+a6Ns4wG7vuozgR2ybduecGXjw15Zne5YFk+WIII0WRyAGLo5CqhKoORDbalR7DbjRNitiaR7mqeMHcixfJsQghS1DOjR5hcshkAoFZeguDTSuIChWVZhSNKgZEUvW1JSUBMkgfucZtomkFdqpaasWkN5Drmo7jsWvFOpZcjEvkWRVHFmh3MujmrpJgHUaBnkJhBnaQtCzHwhpaSWbIgkPHU8rEa6E4RWQkqCXVFUlHUc4Sc56VuXJWXtkmUEcj26kZguWSaIogrEhcKh1QqplyqN8oCK0qDEQ0hRtQBtKyaBdGmseFpntaF5FYgqDPJc9QKgZDTKEIEU1tKeYrXkiV1O07ype1m3uWBPU+dBA2FUNCh8NOuJIUUKgBicpmqAJCgBpNxmfih4kpf+64DFttFAmM3m5aQ+WHYN-YlfItyTZVCjVeFFTDXirTA88Ah5J+60Y84WM-XjjGcgVtok8DoMVu6dzqNp2FkKN87KEZZlPFZ+gdOwdAQHAXBGHz8GaQAtEoXra++0VEsbJtEuIbOUZrAUSK00oVrk7qXfOXoqHISi5t+6hoTIxnJe96OUXSAJ0Vbx1aTpY65o72jO7xAbTq0Ps4u7KEjebaMUS5uryfGocZk08gEXkCoPGQDyTgq0UvKo1RLsoFsuRl2PAnn-ZNNOPtEq0TzulIpy8YKr6S9UkpGYGY4Nx1nNZa3CGFFkAkEZVSo1iUt20-6cgLzIkup8UUgOf7meAZzIdE4DJPfniTpl0ShEhqUMNxW7CNysS9koYf6rGDQ9iwLAAB3Y0EBZ6aUeKZd004FzNAXESD0BRFa6CAA */
+    /** @xstate-layout N4IgpgJg5mDOIC5QCMBMBjAdAGwPZQEsA7AfTAFsBDA7TCgBwBcBPE4+gV0YGIBhAeQByAFQCSggKoBRANoAGALqJQ9XLAKMCuIspAAPRAHYArAEYANCGaIAnABZTmVAF9nltFjyFSFarQYsbEScPFIAsgCCogAyJOIAChLC8kpIIKrqmtq6BgiGDpbWCKamABylmMYAzDW1dTWu7hg4+MRkVDR05Eys7Fzc4VGxCUkypqkqahpaOmm5JaZ2hYimcjaoTo0gHi3e7X5dPUEhA5ExcYKJyagT6VNZs6DzxnKoy8WmVYaYpQBs-wDAb9Slsdl42r5OgFWGAAE6w3CwvhCMSSWSKXQZabZOYrF5vKyIUp2b6GUHNcE+Dr+bqBOEIpGDc4jZIYtJYh45PGvd42QxyTBktzbCmtKkHaFkeGI05DC5XMa3DkzLnFUomd6lVCOOT1PVVcmeMX7TrEABulGwBAgx36AhE4mkKUx9xVuIQqF+VQqxk1dl+mH1esNuwh1Mw5st1ttoTOw0uozZk0ybqeRgKhOKVV+AuqQdqIcpJtokatNr6sblLMVLpTOLTHtQdlK71W2p+QM7QqaRr2kJLRAtZalDORDrRzvZrvr+kQnu170MqCqgfzBeFYON-Yjg6jNvpMqZ8YVSbudces7yGaK3oDNnvD8fD8LW-DpejB8Zcflo3GtexF65KgTYtpmxhmKua4Ghuop9m+u7Dp+srMgm1xKtOgFzr8C5gRBUENDBvZhgcQ7RhWY6ok6p7KjOuRVMuvy8thmyEaG4qdKR5bBP0R4-qy6Hnqq+QWJmJjGIGnZAt2IpEextCcTGyHHr+AkAaqCxLJmAKCi+cEkXuim8dWNz-py7qmPi7wkjYkH5p6hrcAASlIADKUj8aZqaXqghiMZmnyvJU+G6cRUK0r03E8IIUgAOokAAIuE-CTsmanmT54kAnYxj8nI6pyHIhituBdiYHY5VmNqdg2BZTauMKRC4BAcC6B4nm0XOqCgUUpguKxRb9u1mEIMYwHvKgNh3k+002CFcmHIEFZDaqOVyK23rSZuelhUcn7LelhjdSsBVyHNxY7gpS1ToJ7pVAVNiajVZ3bu++7SrC+0NsuVSaUU6q-M94aXZFn2XqYNilCJPW6qYIb0JQsCwAA7oiECg3RvwPZmnrGPVzhAA */
     id: 'b2c',
     context: {
         emailValue: '',
@@ -34,18 +34,7 @@ const testMachine = setup({
     on: {
         RESET: {
             target: '#b2c.login_email',
-            actions: assign((context) => {
-                return {
-                    emailValue: '',
-                    emailErrorMessage: '',
-                    emailValidationMessage: '',
-                    dispatchedContinue: false,
-                    passwordValue: '',
-                    passwordErrorMessage: '',
-                    passVisible: false,
-                    // "Invalid username or password" | "Account is locked" (3rd time)
-                };
-            }),
+            actions: "inline:b2c#RESET[-1]#transition[0]",
         },
     },
     initial: 'login_email',
@@ -59,29 +48,32 @@ const testMachine = setup({
                         CONTINUE: [
                             {
                                 target: '#b2c.login_email.empty_error',
-                                actions: ['dispatchEmailNext', 'setEmptyError'],
+                                actions: ["dispatchEmailNext", "setEmptyError"],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
+
                         EMAIL_INPUT: [
                             {
                                 target: '#b2c.login_email.valid_input',
                                 guard: 'emailValid',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_error',
                                 guard: 'emailInvalidError',
-                                actions: ['inputEmail', 'setValidError'],
+                                actions: ["inputEmail", "setValidError"],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_input',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
+
+                        NEW_DEMO: "valid_input"
                     },
                 },
                 empty_error: {
@@ -94,12 +86,12 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.valid_input',
                                 guard: 'emailValid',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_error',
-                                actions: ['inputEmail', 'setValidError'],
+                                actions: ["inputEmail", "setValidError"],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -110,7 +102,7 @@ const testMachine = setup({
                         CONTINUE: [
                             {
                                 target: '#b2c.login_email.invalid_error',
-                                actions: ['dispatchEmailNext'],
+                                actions: ["dispatchEmailNext"],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -118,12 +110,12 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.empty_input',
                                 guard: 'emailEmpty',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.valid_input',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -139,19 +131,19 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.empty_input',
                                 guard: 'emailEmpty',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.valid_input',
                                 guard: 'emailValid',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_error',
                                 guard: 'emailInvalidError',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -164,18 +156,18 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.empty_input',
                                 guard: 'emailEmpty',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_error',
                                 guard: 'emailInvalidError',
-                                actions: ['inputEmail', 'setValidError'],
+                                actions: ["inputEmail", "setValidError"],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_input',
-                                actions: 'inputEmail',
+                                actions: "inputEmail",
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -183,7 +175,8 @@ const testMachine = setup({
                 },
             },
         },
-        password: {},
+
+        password: {}
     },
 });
 
