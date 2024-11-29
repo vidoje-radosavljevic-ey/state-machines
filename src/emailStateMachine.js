@@ -34,7 +34,7 @@ const testMachine = setup({
     on: {
         RESET: {
             target: '#b2c.login_email',
-            actions: "inline:b2c#RESET[-1]#transition[0]",
+            actions: 'inline:b2c#RESET[-1]#transition[0]',
         },
     },
     initial: 'login_email',
@@ -48,7 +48,7 @@ const testMachine = setup({
                         CONTINUE: [
                             {
                                 target: '#b2c.login_email.empty_error',
-                                actions: ["dispatchEmailNext", "setEmptyError"],
+                                actions: ['dispatchEmailNext', 'setEmptyError'],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -57,23 +57,24 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.valid_input',
                                 guard: 'emailValid',
-                                actions: "inputEmail",
+                                actions: 'inputEmail',
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_error',
                                 guard: 'emailInvalidError',
-                                actions: ["inputEmail", "setValidError"],
+                                actions: ['inputEmail', 'setValidError'],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_input',
-                                actions: "inputEmail",
+                                actions: 'inputEmail',
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
 
-                        NEW_DEMO: "valid_input"
+                        NEW_DEMO: 'valid_input',
+                        BACK_TO_STATELY: 'empty_error',
                     },
                 },
                 empty_error: {
@@ -86,12 +87,12 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.valid_input',
                                 guard: 'emailValid',
-                                actions: "inputEmail",
+                                actions: 'inputEmail',
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_error',
-                                actions: ["inputEmail", "setValidError"],
+                                actions: ['inputEmail', 'setValidError'],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -102,7 +103,7 @@ const testMachine = setup({
                         CONTINUE: [
                             {
                                 target: '#b2c.login_email.invalid_error',
-                                actions: ["dispatchEmailNext"],
+                                actions: ['dispatchEmailNext'],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -110,12 +111,12 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.empty_input',
                                 guard: 'emailEmpty',
-                                actions: "inputEmail",
+                                actions: 'inputEmail',
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.valid_input',
-                                actions: "inputEmail",
+                                actions: 'inputEmail',
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -131,19 +132,19 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.empty_input',
                                 guard: 'emailEmpty',
-                                actions: "inputEmail",
+                                actions: 'inputEmail',
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.valid_input',
                                 guard: 'emailValid',
-                                actions: "inputEmail",
+                                actions: 'inputEmail',
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_error',
                                 guard: 'emailInvalidError',
-                                actions: "inputEmail",
+                                actions: 'inputEmail',
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -156,18 +157,18 @@ const testMachine = setup({
                             {
                                 target: '#b2c.login_email.empty_input',
                                 guard: 'emailEmpty',
-                                actions: "inputEmail",
+                                actions: 'inputEmail',
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_error',
                                 guard: 'emailInvalidError',
-                                actions: ["inputEmail", "setValidError"],
+                                actions: ['inputEmail', 'setValidError'],
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                             {
                                 target: '#b2c.login_email.invalid_input',
-                                actions: "inputEmail",
+                                actions: 'inputEmail',
                                 description: '***** DESCRIPTION DEFINED BY BA *****',
                             },
                         ],
@@ -176,7 +177,7 @@ const testMachine = setup({
             },
         },
 
-        password: {}
+        password: {},
     },
 });
 
