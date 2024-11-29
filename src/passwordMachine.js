@@ -5,7 +5,7 @@ const { setup, createMachine, createActor, assign } = require('xstate');
 
 const testMachine = createMachine(
     {
-        /** @xstate-layout N4IgpgJg5mDOIC5QAcCGtYHcD2AnCAxAEoCiAyiQCoDaADALqIrawCWALq9gHZMgAeiAIy0A7AFYAdAGYAbACZx4gJxzF4+QBoQAT2HyAvge1oMOfJLDd2YXAH1TWPIQDCAGQCSLgNJ2AYgDyRADiATQMfMgsHFy8SAKI8gAs0pJCChqiSUkAHCmy0uLaeghCIsppikLy0vI5srKiyklGJuhOFlY29o7mrp4+dqF2AEIAgj50jPFRbJw8fIIIyanpivJZufmFxYlZkqIStPIF0rXiOdKtIL3Olta2Du19BO5evm4BwXYeAHJTkWi8zioCWKzSGQ22Tych2ukQshyokkSVUOREOXE0kOeWut06Dx6z2crwGHy+P3+QmmzDmsUWiRSEPWmxhBSK8IQSVkFUuEixQiOSgKeOJBO6TzMJLeg0+3z+1HkNJuQPp8TBTLWmWh2w5JSEOVoB0UtDKtGUtFRyiE4lFUosrG4ADdUAAbVgQOwAV1gtm4qAAtmA7HhJR1+u9-EFQuFlbMYgt1YgckjJLIDfUMtzlDzdggVEabQokZic-Jy3bw5JHS73Z6fX7A8HQ-iI4NhuNJhEZqrE6Dk6n0ymGops7nOdlUuJEaJZLlRNIhIuWsYbmKINXnW6Pd7fbh-UGQ0T7W3yfL-t3aQmQQkECnkUPM6OeeOSuIkkJJPI0bRF+JaJcQiVn0m61juDb7k2R5hi8MpnpS1DUoCdJ9re95phmI7vi+yh5tIzQHLQxamnO0hJKawF3GAAbIOwOgwdKZJRiEYQAj2KE3ksQhJDUkj1Bs5rpPxdR5lkFRnEuGywti76UZ0NF0Qx+CkpGHYTN4bFXsCDKlDxqT8aIgmIgoImcoZRrcimQjKIZ1RlDkckbtRtH0a2KmyhSCqXiqHE6daRqIku9QpMJeaovIKKLhsiiFN+qKiI5lgKa567ufBCpIex146dxvEGUZwk5Hmc6fsoaIGjyogph+iUAGZ4FA2DsEpp5DAEozqZpPnZUmpTiFVfH-icyjyCIKjJHmyg5BU1nSJiTRVdaS51Q1TUtQQvwkAAGrGyE9f2pQ5hU-5zpaxwpnIsh5uUyIAScayiAa1kJdc3DYBAcCROue3ab1AC0QiTaktD-rQRFEdxIg1IlXSPK2P1qgdSSiKJ5p8RaNRyHkzSqIlNbbvWe4Hs2x7hgjqFLAWkhlkoOZIumihhSNlRDem4jpNIxww8lLXk5x+jcjI6xLuaxyjajhYZJcc6yNOSS2quraSPVuCNc18NZb9B2Csz04WtOYMfsjgOcuUsgHLOZE8mRVXJIlTq2KwtX0QAxu9YB8zp8hiJ+5zVGITT9Sb+rmubhwFNmNs5HbivrpIAaoP6MAONg7ou6wn2a4jt46xFesg7IhvcY9xWc3xGYnOWWMKNzqCsK6nu9bnkj5wblrF8HCLTV+P4qMo7OTkYRhAA */
+        /** @xstate-layout N4IgpgJg5mDOIC5QAcCGtYHcD2AnCAdGAHYAuYuA+mhjvgMQDCAMgJKMDSlAYgPIBKAcV4AVANoAGALqIU2WAEtSC7MVkgAHogCMANm0SANCACeiAMwAWAJwBfW8ZpY8hEuSpO6EJm06VhlABCAIKckjJIIMjySipqkVoI2gDs1tbGZghWdg5R6M74RGQU1PlePuxczLyClKwAcuHq0YrKquqJ2gBMAKyWGRZdlvaOZS5F7qW0LhV+1bUNYtoRcq1xHYiWEl0EABzmB4dHBwMIlrrDuZ7jbiXXDCyVlPN1jV0rUTFt8aCJ5j3aU66CSXUbTQoKYgAN1QABsFBBKABXWAUYioAC2YEoeCmBW8jz8fCEoiakRasXaCR03SMpkQui6OTB+IIkJh8MRKLRmOxuPuBN8XACITC0maX3W1KS1l2gPpCEZzLy4MI7LhCORqNw6KxOI8YweQueNVeZNWlJ+mh0+msBEsel0Tudzp6p32uhGKtZ6s5Wp5ev5hsFTxei2WErWVN+Np6yQI1kdLpdboV1mSnquwaIGOQpBMePKhK4xOE4nF5Ml0etSXMEnSCqVXoFObzBYFs2FvCCoQ45s+UatnWSu10QKZzezYFz+cLM2LJoWjQrFu+GySXXMu3tSeTTtTmQ9k9VrdnHYXYcaEcrg-X3QzCd3e4PiHTmZZXgIADM8FBsKQ5yNJ4RV7fsKTXaVrCsAg91g05smPVkf1wP8AI7eoAFEAA1yw+cCpRjBA0jHRsJyzE9kNQwDvACNgADUMLAqsh0QXYenMcdlRbSj-2o+gAgAZREXgAAUmNvaVkgkDjSK44N6H4DCBIw3DI0tO8ulOHoukQz9bgNVV6EwgB1SgMIY+oRAE8T1OlLoM3gmx7FyYhsAgOBmmDNSIMIroul2U5ul0m5igM-FvIImttEOU5Nx08ifWhDUuW1XU+TCrwIurRJ9ACtMM2CwppzbaispY2stlOZJLFBb1Px4tCvJvWzCOsHoSMyGxdkKwgoQoBQvwLABjNywDK9dkiGKqap6ggMVQdEYGobB4SGhQPOanya0sEdAu0PRZunVAFFhcbpW0fYZM66xM3sIA */
         id: 'password',
         context: {
             passwordValue: '',
@@ -18,18 +18,7 @@ const testMachine = createMachine(
         on: {
             RESET: {
                 target: '#password',
-                actions: assign((context) => {
-                    return {
-                        emailValue: '',
-                        emailErrorMessage: '',
-                        emailValidationMessage: '',
-                        dispatchedContinue: false,
-                        passwordValue: '',
-                        passwordErrorMessage: '',
-                        passVisible: false,
-                        // "Invalid username or password" | "Account is locked" (3rd time)
-                    };
-                }),
+                actions: "inline:password#RESET[-1]#transition[0]",
             },
         },
         initial: 'enter_password',
@@ -38,15 +27,21 @@ const testMachine = createMachine(
                 on: {
                     CLICK_FORGOT: '#password.forgot_password',
                     CLICK_GO_BACK: '#password.email',
+
                     CLICK_LOG_IN: [
-                        { target: '#password.empty_password', guard: 'passwordEmpty', actions: 'inputEmptyPassword' },
+                        { target: '#password.empty_password', guard: 'passwordEmpty', actions: "inputEmptyPassword" },
                         {
                             target: '#password.invalid_username_or_password',
                             guard: 'passwordInvalid',
-                            actions: 'inputWrongPassword',
+                            actions: "inputWrongPassword",
                         },
-                        { target: '#password.manage_policies', guard: 'passwordValid', actions: 'inputValidPassword' },
+                        { target: '#password.manage_policies', guard: 'passwordValid', actions: "inputValidPassword" },
                     ],
+
+                    NEW_EVENTS: {
+                        target: "invalid_username_or_password",
+                        cond: "New guard"
+                    }
                 },
             },
             invalid_username_or_password: {
@@ -54,8 +49,8 @@ const testMachine = createMachine(
                     CLICK_FORGOT: '#password.forgot_password',
                     CLICK_GO_BACK: '#password.email',
                     CLICK_LOG_IN: [
-                        { target: '#password.empty_password', guard: 'passwordEmpty', actions: 'inputEmptyPassword' },
-                        { target: '#password.manage_policies', guard: 'passwordValid', actions: 'inputValidPassword' },
+                        { target: '#password.empty_password', guard: 'passwordEmpty', actions: "inputEmptyPassword" },
+                        { target: '#password.manage_policies', guard: 'passwordValid', actions: "inputValidPassword" },
                     ],
                 },
             },
@@ -67,9 +62,9 @@ const testMachine = createMachine(
                         {
                             target: '#password.invalid_username_or_password',
                             guard: 'passwordInvalid',
-                            actions: 'inputValidPassword',
+                            actions: "inputValidPassword",
                         },
-                        { target: '#password.manage_policies', guard: 'passwordValid', actions: 'inputValidPassword' },
+                        { target: '#password.manage_policies', guard: 'passwordValid', actions: "inputValidPassword" },
                     ],
                 },
             },
